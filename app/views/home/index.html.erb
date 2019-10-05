@@ -1,7 +1,7 @@
 <div style="text-align: center;">
   <h2>Chat Application</h2>
 
-  <%= form_for @message do |form| %>
+  <%= form_for Message.new do |form| %>
     <%= form.label :body, 'Type a message' %>
     <%= form.text_field :body, required: true, data: { message: true } %>
   <% end %>
@@ -10,6 +10,6 @@
   <p id="dummy_message"></p>
 
   <div id="messages">
-    <%= render @messages %>
+    <%= render Message.new %>
   </div>
 </div>
